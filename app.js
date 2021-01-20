@@ -36,7 +36,7 @@ function handleCalculate(e){
 
  function fib(number){
      if(number <=1){
-         return number;
+         return 1;
      }
      if(memory[number]){
          return memory[number];
