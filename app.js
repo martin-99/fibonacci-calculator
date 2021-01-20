@@ -8,7 +8,13 @@ memory = {};
 function handleCalculate(e){
     e.preventDefault();
     if(numberField.value>0 && numberField.value<=250){ 
-        result.innerHTML = fib(numberField.value)
+        anime({
+            targets: result,
+            innerHTML: [0,fib(numberField.value)],
+            easing: 'linear',
+            round: 10
+        });
+
     }else{
         result.innerHTML = "Please enter a valid number"
     }
